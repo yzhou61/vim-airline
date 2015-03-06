@@ -48,15 +48,15 @@ function! airline#extensions#ctrlp#ctrlp_airline(...)
   if get(g:, 'airline#extensions#ctrlp#show_adjacent_modes', 1)
     call b.add_section_spaced('CtrlPlight', a:4)
     call b.add_section_spaced('CtrlPwhite', a:5)
-    call b.add_section_spaced('CtrlPlight', a:6)
+    "call b.add_section_spaced('CtrlPlight', a:6)
   else
     call b.add_section_spaced('CtrlPwhite', a:5)
   endif
   call b.add_section_spaced('CtrlPdark', a:7)
   call b.split()
-  call b.add_section_spaced('CtrlPdark', a:1)
+  call b.add_section_spaced('CtrlPlight', a:1)
   call b.add_section_spaced('CtrlPdark', a:2)
-  call b.add_section_spaced('CtrlPlight', '%{getcwd()}')
+  call b.add_section_spaced('CtrlPwhite', '%{getcwd()}')
   return b.build()
 endfunction
 
