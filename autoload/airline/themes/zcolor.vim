@@ -67,7 +67,7 @@ let g:airline#themes#zcolor#palette.visual_modified = {
       \ }
 
 
-let s:IA1 = [ '#4e4e4e' , '#1c1c1c' , 242 , 234 , '' ]
+let s:IA1 = [ '#4e4e4e' , '#1c1c1c' ,  16 , 255 , '' ]
 let s:IA2 = [ '#4e4e4e' , '#262626' , 242 , 235 , '' ]
 let s:IA3 = [ '#4e4e4e' , '#303030' , 242 , 236 , '' ]
 let g:airline#themes#zcolor#palette.inactive = airline#themes#generate_color_map(s:IA1, s:IA2, s:IA3)
