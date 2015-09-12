@@ -92,8 +92,14 @@ function! airline#extensions#default#apply(builder, context)
 
   call a:builder.split(s:get_section(winnr, 'gutter', '', ''))
 
-  if airline#util#getwinvar(winnr, 'airline_render_right', 1)
+  if airline#util#getwinvar(winnr, 'airline_render_right', active || (!active && !g:airline_inactive_collapse))
     call s:build_sections(a:builder, a:context, s:layout[1])
+  else
+    let text = s:get_section(winnr, 'y')
+    if empty(text)
+      let text = ' %y '
+    endif
+    call a:builder.add_section('airline_y'.(a:context.bufnr), text)
   endif
 
   return 1
